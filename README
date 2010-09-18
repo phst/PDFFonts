@@ -1,0 +1,3 @@
+This is a tiny program that uses Mac OS X's PDF capabilities to list
+fonts embedded in a PDF document.  It can be used as a replacement for
+the pdffonts utility found in most Linux distributions.
