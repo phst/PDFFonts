@@ -36,7 +36,7 @@
 @implementation FontProperties
 
 - (id)initWithType:(NSString *)aType name:(NSString *)aName {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		type = aType;
 		name = aName;
 	}

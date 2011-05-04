@@ -40,7 +40,7 @@ static void processFontDictionary(const char *key, CGPDFObjectRef object, void *
 @implementation DocumentProcessor
 
 - (id)initWithURL:(NSURL *)aURL fontList:(FontList *)aResult {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		url = aURL;
 		result = aResult;
 	}

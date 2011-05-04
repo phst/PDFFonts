@@ -43,6 +43,7 @@
 
 - (id)initWithPretty:(BOOL)aPretty sorted:(BOOL)aSorted;
 - (void)addFontProperties:(FontProperties *)properties;
+- (NSArray *)getSortedArray;
 - (void)print;
 
 @end

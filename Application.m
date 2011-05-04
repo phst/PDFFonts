@@ -39,7 +39,7 @@
 @implementation Application
 
 - (id)init {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		merged = NO;
 		pretty = YES;
 		sorted = YES;

@@ -34,7 +34,7 @@
 
 #import "Application.h"
 
-int main (int argc, char *const argv[]) {
+int main(void) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	Application *application = [[Application alloc] init];
 	[application processDocuments];

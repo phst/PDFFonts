@@ -36,7 +36,7 @@
 @implementation FontList
 
 - (id)initWithPretty:(BOOL)aPretty sorted:(BOOL)aSorted {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		pretty = aPretty;
 		sorted = aSorted;
 		data = aSorted ? [NSMutableSet set] : [NSMutableArray array];
@@ -49,8 +49,17 @@
 	[data addObject:item];
 }
 
+- (NSArray *)getSortedArray {
+	if (sorted) {
+		NSArray *array = [data allObjects];
+		return [array sortedArrayUsingSelector:@selector(nameCompare:)];
+	} else {
+		return data;
+	}
+}
+
 - (void)print {
-	NSArray* array = sorted ? [[data allObjects] sortedArrayUsingSelector:@selector(nameCompare:)] : data;
+	NSArray *array = [self getSortedArray];
 	for (FontProperties *properties in array) {
 		printf("%s\n", [[properties description] UTF8String]);
 	}
