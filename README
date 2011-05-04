@@ -1,3 +1,29 @@
-This is a tiny program that uses Mac OS X's PDF capabilities to list
-fonts embedded in a PDF document.  It can be used as a replacement for
-the pdffonts utility found in most Linux distributions.
+``PDFFonts``
+============
+
+This is a tiny program that uses Mac OS X’s PDF capabilities to list fonts
+embedded in a PDF document.  It can be used as a replacement for the ``pdffonts``
+utility found in most Linux distributions.
+
+
+Usage
+-----
+
+::
+
+    PDFFonts [options] [files]
+
+
+Options
+-------
+
+-m  merge lists from all files, implies ``-U -N``
+-M  don’t merge, the default
+-r  don’t prettify font names, opposite of ``-R``
+-R  remove everything up to first plus sign (garbage written by PDFTeX to
+    create unique names), the default
+-u  don’t sort the list, implies ``-M``
+-U  sort the list, the default
+-n  add header line for each file, implies ``-M``
+-N  never add header lines
+-a  add header lines if and only of more than file was given
