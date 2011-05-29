@@ -6,6 +6,13 @@ embedded in a PDF document.  It can be used as a replacement for the ``pdffonts`
 utility found in most Linux distributions.
 
 
+Installation
+------------
+
+Compile the code with the Xcode IDE or the ``xcodebuild`` command, and copy the
+binary file ``build/Release/PDFFonts`` into any directory in your search path.
+
+
 Usage
 -----
 
@@ -26,4 +33,4 @@ Options
 -U  sort the list, the default
 -n  add header line for each file, implies ``-M``
 -N  never add header lines
--a  add header lines if and only of more than file was given
+-a  add header lines if and only if more than one file was given
