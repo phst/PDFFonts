@@ -177,6 +177,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = PDFFonts;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -186,6 +187,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = PDFFonts;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
