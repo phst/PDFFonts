@@ -68,7 +68,7 @@ static void processFontDictionary(const char *key, CGPDFObjectRef object, void *
 	if (CGPDFDictionaryGetDictionary(pageDictionary, "Resources", &resourceDictionary)) {
 		CGPDFDictionaryRef fontResourceDictionary = nil;
 		if (CGPDFDictionaryGetDictionary(resourceDictionary, "Font", &fontResourceDictionary)) {
-			CGPDFDictionaryApplyFunction(fontResourceDictionary, processFontDictionary, self);
+			CGPDFDictionaryApplyFunction(fontResourceDictionary, processFontDictionary, (__bridge void *)(self));
 		}
 	}
 }
@@ -95,7 +95,7 @@ static void processFontDictionary(const char *key, CGPDFObjectRef object, void *
 static void processFontDictionary(const char *key, CGPDFObjectRef object, void *info) {
 	CGPDFDictionaryRef fontDictionary = NULL;
 	if (CGPDFObjectGetValue(object, kCGPDFObjectTypeDictionary, &fontDictionary)) {
-		id documentProcessor = (id)info;
+		id documentProcessor = (__bridge id)info;
 		[documentProcessor processFontDictionary:fontDictionary];
 	} else {
 		NSLog(@"Font resource item does not point to a dictionary");

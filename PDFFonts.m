@@ -35,10 +35,10 @@
 #import "Application.h"
 
 int main(void) {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	Application *application = [[Application alloc] init];
-	[application processDocuments];
-    [pool drain];
+    @autoreleasepool {
+		Application *application = [[Application alloc] init];
+		[application processDocuments];
+    }
     return 0;
 }
 
