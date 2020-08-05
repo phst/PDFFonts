@@ -51,7 +51,7 @@
 
 - (NSArray *)getSortedArray {
 	if (sorted) {
-		NSArray *array = [data allObjects];
+		NSArray *array = [(NSSet *)data allObjects];
 		return [array sortedArrayUsingSelector:@selector(nameCompare:)];
 	} else {
 		return data;
